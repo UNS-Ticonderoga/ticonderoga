@@ -772,6 +772,9 @@ Equip items from body traits.
 		C.name = "[C.registered]’s ID Card ([C.assignment])"
 		C.access = JOB.access.Copy()
 		C.pronouns = src.get_pronouns()
+// TICONDEROGA CHANGE
+		C.rank = C.allow_rank ? src.assign_rank(JOB) : null
+// TICONDEROGA CHANGE END
 
 		if(!src.equip_if_possible(C, SLOT_WEAR_ID))
 			if(istype((src.wear_id), /obj/item/device/pda2))

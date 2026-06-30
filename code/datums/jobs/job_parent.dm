@@ -95,6 +95,11 @@ ABSTRACT_TYPE(/datum/job)
 	var/player_requested = FALSE //! Flag if currently requested via RoleControl
 	var/email_group = null //! Which email workgroup does this role belong to
 
+// TICONDEROGA CHANGE
+	/// See `_std\_modular_ticonderoga\defines\rank.dm`.
+	/// If given as an alist, the value for each rank key will determine the minimum rounds required to achieve that rank.
+	var/rank_type = null
+// TICONDEROGA CHANGE END
 
 	New()
 		..()

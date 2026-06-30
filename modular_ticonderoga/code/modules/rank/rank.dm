@@ -1,22 +1,16 @@
-var/global/alist/officer_ranks = list()
-var/global/alist/enlisted_ranks = list()
+var/global/alist/un_ranks = list()
 
 /proc/build_rank_list()
-	var/alist/officer_ranks_buffer = list()
-	var/alist/enlisted_ranks_buffer = list()
+	var/alist/un_ranks_buffer = list()
 
 	for (var/rank_type in concrete_typesof(/datum/rank))
 		var/datum/rank/rank = get_singleton(rank_type)
-		if (rank.rank_type == RANK_OFFICER)
-			officer_ranks_buffer[rank.name] = rank
-		else
-			enlisted_ranks_buffer[rank.name] = rank
+		un_ranks_buffer[rank.name] = rank
 
-	if (!length(officer_ranks_buffer) && !length(enlisted_ranks_buffer))
+	if (!length(un_ranks_buffer))
 		return
 
-	global.officer_ranks = officer_ranks_buffer
-	global.enlisted_ranks = enlisted_ranks_buffer
+	global.un_ranks = un_ranks_buffer
 
 /mob/living/carbon/human/proc/get_worn_rank()
 	. = null
@@ -26,6 +20,29 @@ var/global/alist/enlisted_ranks = list()
 		return
 
 	. = worn_id.rank
+
+/mob/living/proc/assign_rank(datum/job/job)
+	var/rank_name = ""
+
+	if (!length(job.rank_type))
+		return
+
+	if (is_alist(job.rank_type))
+		var/alist/rank_list = job.rank_type
+		var/rounds_participated = src.client?.player?.get_rounds_participated() || 0
+
+		for (var/rank_type in rank_list)
+			if (rank_list[rank_type] > rounds_participated)
+				continue
+			rank_name = rank_type
+			break
+
+		if (!length(rank_name))
+			rank_name = rank_list[length(rank_list)]
+	else
+		rank_name = job.rank_type
+
+	. = global.un_ranks[rank_name] || null
 
 ABSTRACT_TYPE(/datum/rank)
 /datum/rank

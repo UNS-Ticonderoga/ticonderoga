@@ -1,7 +1,12 @@
 ABSTRACT_TYPE(/datum/job/medical)
 /datum/job/medical
 	ui_colour = TGUI_COLOUR_PINK
-	slot_card = /obj/item/card/id/medical
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O1
+	slot_card = /obj/item/card/id/un/medical
+// TICONDEROGA CHANGE ORIGINAL
+	// slot_card = /obj/item/card/id/medical
+// TICONDEROGA CHANGE END
 	job_category = JOB_MEDICAL
 	email_group = MGD_MEDICAL
 

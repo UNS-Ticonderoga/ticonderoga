@@ -12,9 +12,6 @@
 /obj/item/card/id/un/security
 	icon_state = "id_sec"
 
-/obj/item/card/id/un/research
-	icon_state = "id_res"
-
 /obj/item/card/id/un/medical
 	icon_state = "id_med"
 

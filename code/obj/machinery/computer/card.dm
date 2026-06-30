@@ -394,8 +394,7 @@
 					if (params["rank"] == "remove")
 						src.modify.rank = null
 					else
-						var/alist/rank_cache = global.officer_ranks + global.enlisted_ranks
-						var/datum/rank/new_rank = rank_cache[tgui_input_list(usr, "Select a rank to assign.", "Assignment", rank_cache, src.modify.rank?.name)]
+						var/datum/rank/new_rank = un_ranks[tgui_input_list(usr, "Select a rank to assign.", "Assignment", un_ranks, src.modify.rank?.name)]
 						src.modify.rank = new_rank
 // TICONDEROGA CHANGE END
 
