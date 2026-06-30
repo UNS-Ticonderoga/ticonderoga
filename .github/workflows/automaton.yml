@@ -29,6 +29,9 @@ jobs:
             "KONDARU",
             "NADIR",
             "NEON",
+# TICONDEROGA CHANGE
+            "TICONDEROGA",
+# TICONDEROGA CHANGE END
             "SPACE_PREFAB",
             "UNDERWATER_PREFAB",
             "RANDOM_ROOMS",
@@ -103,6 +106,9 @@ jobs:
             "KONDARU",
             "NADIR",
             "NEON",
+# TICONDEROGA CHANGE
+            "TICONDEROGA",
+# TICONDEROGA CHANGE END
             "SPACE_PREFAB",
             "UNDERWATER_PREFAB",
             "RANDOM_ROOMS",
