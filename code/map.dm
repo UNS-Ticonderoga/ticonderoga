@@ -40,6 +40,9 @@ var/global/list/mapNames = list(
 	"blank" =				list("id" = "BLANK",		"settings" = "", 				"playerPickable" = FALSE),
 	"blank_underwater" =	list("id" = "BLANK_UNDERWATER", "settings" = "", 			"playerPickable" = FALSE),
 	"DevTest" =				list("id" = "DEVTEST",		"settings" = "devtest",			"playerPickable" = FALSE,	"MaxPlayersAllowed" = 69),
+// TICONDEROGA CHANGE
+	"Ticonderoga" =			list("id" = "TICONDEROGA",	"settings" = "ticonderoga",		"playerPickable" = FALSE),
+// END TICONDEROGA CHANGE
 )
 
 /obj/landmark/map

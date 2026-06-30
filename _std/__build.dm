@@ -136,6 +136,10 @@ o+`        `-` ``..-:yooos-..----------..`
 
 //#define MAP_OVERRIDE_DEVTEST      // Developer Testing map, by cringe
 
+// TICONDEROGA CHANGE
+//#define MAP_OVERRIDE_TICONDEROGA	// UNS Ticonderoga
+// TICONDEROGA CHANGE END
+
 //-------Special Events:
 //#define MAP_OVERRIDE_CONSTRUCTION // Construction mode
 //#define MAP_OVERRIDE_POD_WARS     // 500x500 Pod Wars map

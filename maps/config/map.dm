@@ -106,6 +106,11 @@
 #elif defined(GOTTA_GO_FAST_BUT_ZLEVELS_TOO_SLOW)
 #include "gottagofast.dm"
 
+// TICONDEROGA CHANGE
+#elif defined(MAP_OVERRIDE_TICONDEROGA)
+#include "../../modular_ticonderoga/maps/config/ticonderoga.dm"
+// TICONDEROGA CHANGE END
+
 //Entry below is the "default" map
 #else
 #include "standard.dm"

@@ -70,6 +70,10 @@
 
 #elif defined(MAP_OVERRIDE_FLEET)*/
 
+// TICONDEROGA CHANGE
+#elif defined(MAP_OVERRIDE_TICONDEROGA)
+// END TICONDEROGA CHANGE
+
 #else // the "default" map
 //#define UNDERWATER_MAP 1
 
