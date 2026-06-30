@@ -62,7 +62,7 @@
 /turf/simulated/floor/sanitary/white,
 /area/station/medical/crematorium)
 "ce" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/crew_quarters/captain{
 	name = "Commanding Officer's Quarters"
@@ -85,7 +85,7 @@
 /turf/simulated/floor/wood/two,
 /area/station/crew_quarters/cafeteria)
 "cp" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -104,7 +104,7 @@
 	name = "Marine Officer's Quarters"
 	})
 "cB" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 10
@@ -161,7 +161,7 @@
 /turf/unsimulated/floor,
 /area/space)
 "dX" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -247,7 +247,7 @@
 /turf/simulated/floor/black,
 /area/station/security/brig/genpop)
 "gm" = (
-/obj/mapping_helper/wingrille_spawn/auto/crystal,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced/crystal,
 /turf/simulated/floor/plating,
 /area/station/security/brig/genpop)
 "gw" = (
@@ -379,7 +379,7 @@
 	name = "Commanding Officer's Quarters"
 	})
 "iB" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/bridge)
 "iJ" = (
@@ -500,7 +500,7 @@
 /turf/unsimulated/floor,
 /area/station/hallway/primary/central)
 "lD" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield"
 	},
@@ -513,7 +513,7 @@
 	},
 /area/station/medical/medbay)
 "lI" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -594,7 +594,7 @@
 	name = "Executive Officer's Quarters"
 	})
 "nd" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 6
@@ -677,7 +677,7 @@
 	name = "Starboard Hangar"
 	})
 "pk" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/medical/research)
 "pm" = (
@@ -711,7 +711,7 @@
 /turf/simulated/floor/black,
 /area/station/security/processing)
 "pP" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/crew_quarters/fitness{
 	name = "Recreation Center"
@@ -723,7 +723,7 @@
 /turf/simulated/floor/black,
 /area/station/medical/robotics)
 "qd" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -792,11 +792,11 @@
 /turf/simulated/floor/sanitary/white,
 /area/station/medical/crematorium)
 "ro" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/chapel)
 "rC" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -853,7 +853,7 @@
 /turf/unsimulated/floor,
 /area/space)
 "tm" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/crew_quarters/info{
 	name = "Nanotrasen Corporate Liaison Office"
@@ -908,7 +908,7 @@
 	name = "NT Representative's Quarters"
 	})
 "uv" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/hangar/main{
 	name = "Hangar Storage"
@@ -919,7 +919,7 @@
 	name = "Wardroom"
 	})
 "uC" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/medical/medbay)
 "uJ" = (
@@ -928,7 +928,7 @@
 	name = "Nanotrasen Corporate Liaison Office"
 	})
 "uU" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -968,7 +968,7 @@
 /turf/unsimulated/floor,
 /area/station/hallway/primary/central)
 "wh" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -1054,7 +1054,7 @@
 /turf/simulated/floor/wood/two,
 /area/station/crew_quarters/cafeteria)
 "xR" = (
-/obj/mapping_helper/wingrille_spawn/auto/crystal,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced/crystal,
 /turf/simulated/floor/plating,
 /area/station/security/processing)
 "xU" = (
@@ -1156,7 +1156,7 @@
 /turf/unsimulated/wall/auto/reinforced/supernorn/colored,
 /area/space)
 "Ay" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 9
@@ -1174,7 +1174,7 @@
 /turf/simulated/wall/auto/reinforced/supernorn/colored,
 /area/station/medical/research)
 "Bu" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 5
@@ -1182,7 +1182,7 @@
 /turf/simulated/floor/plating,
 /area/station/bridge)
 "Bw" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/crew_quarters/diplomat{
 	name = "NT Representative's Quarters"
@@ -1290,14 +1290,14 @@
 /turf/simulated/wall/auto/reinforced/supernorn/colored,
 /area/station/crew_quarters/kitchen/freezer)
 "FA" = (
-/obj/mapping_helper/wingrille_spawn/auto/crystal,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced/crystal,
 /turf/simulated/floor/plating,
 /area/station/security/brig/solitary)
 "FI" = (
 /turf/simulated/floor/plating,
 /area/space)
 "FN" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/crew_quarters/hos{
 	name = "Marine Officer's Quarters"
@@ -1306,8 +1306,8 @@
 /turf/simulated/wall/auto/reinforced/supernorn/colored/cyan,
 /area/station/medical/medbay/pharmacy)
 "FU" = (
-/turf/simulated/wall/auto/reinforced/supernorn/colored/cyan,
-/area/space)
+/turf/simulated/floor/plating,
+/area/station/medical/medbay/pharmacy)
 "Gk" = (
 /obj/stool/chair,
 /turf/simulated/floor/specialroom/gym/alt,
@@ -1364,7 +1364,7 @@
 /turf/simulated/floor,
 /area/station/hallway/primary/north)
 "HT" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/medical/robotics)
 "HY" = (
@@ -1497,7 +1497,7 @@
 /turf/simulated/floor,
 /area/station/bridge)
 "Ng" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/medical/medbay/surgery/storage)
 "Nh" = (
@@ -1535,7 +1535,7 @@
 	name = "Wardroom"
 	})
 "Oj" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -1566,7 +1566,7 @@
 	name = "Marine Headquarters"
 	})
 "PW" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/crew_quarters/hop{
 	name = "Executive Officer's Quarters"
@@ -1581,7 +1581,7 @@
 /turf/simulated/wall/auto/reinforced/supernorn/colored/red,
 /area/station/security/processing)
 "QB" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -1700,7 +1700,7 @@
 /turf/simulated/floor/plating,
 /area/station/medical/morgue)
 "TD" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/machinery/door/poddoor/pyro/shutters{
 	name = "Blast shield";
 	dir = 8
@@ -1820,7 +1820,7 @@
 /turf/simulated/floor,
 /area/station/bridge)
 "Wp" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
 /area/station/medical/medbay/pharmacy)
 "Wq" = (
@@ -49204,20 +49204,20 @@ EJ
 fw
 Bb
 AX
+pk
+pk
 AX
-AX
-AX
-wQ
-wQ
-wQ
 wQ
 wQ
 wQ
 FR
-FR
-FR
+Wp
+Wp
 FR
 Ev
+Oo
+Oo
+Oo
 Oo
 Oo
 Oo
@@ -49512,14 +49512,14 @@ oY
 wQ
 wQ
 wQ
-wQ
-wQ
-wQ
 fa
 Nq
 st
 UE
 Ev
+Ag
+Ag
+Ag
 Ag
 Ag
 Ag
@@ -49811,17 +49811,17 @@ oY
 oY
 oY
 AX
-AX
-AX
-wQ
-wQ
+pk
 FR
-FR
+Wp
 FR
 mU
 dP
 kB
 Ev
+Ag
+Ag
+Ag
 Ag
 Ag
 Ag
@@ -50114,9 +50114,6 @@ oY
 oY
 oY
 oY
-AX
-wQ
-wQ
 FR
 Nq
 st
@@ -50124,6 +50121,9 @@ aV
 dP
 kB
 Ev
+Ag
+Ag
+Ag
 Ag
 Ag
 Ag
@@ -50416,9 +50416,6 @@ oY
 oY
 oY
 oY
-AX
-wQ
-wQ
 FR
 mU
 dP
@@ -50426,7 +50423,10 @@ dP
 dP
 kB
 Ev
-Ag
+Oo
+Oo
+Oo
+Oo
 Ag
 Ag
 Ag
@@ -50718,9 +50718,6 @@ oY
 oY
 oY
 oY
-AX
-wQ
-wQ
 FR
 mU
 dP
@@ -50728,7 +50725,10 @@ dP
 dP
 kB
 Ev
-Ag
+FU
+FU
+FU
+Oo
 Ag
 Ag
 Ag
@@ -51020,9 +51020,6 @@ pk
 pk
 oY
 pk
-AX
-wQ
-wQ
 FR
 mU
 dP
@@ -51030,7 +51027,10 @@ dP
 dP
 kB
 Ev
-Ag
+FU
+FU
+FU
+Oo
 Ag
 Ag
 Ag
@@ -51322,17 +51322,17 @@ fF
 fF
 fF
 fF
-AX
-wQ
-wQ
 FR
 mU
 dP
 dP
 dP
 kB
-Ev
-Ag
+FU
+FU
+FU
+FU
+Oo
 Ag
 Ag
 Ag
@@ -51624,9 +51624,6 @@ fF
 fF
 fF
 fF
-AX
-wQ
-wQ
 FR
 mU
 dP
@@ -51634,7 +51631,10 @@ dP
 dP
 kB
 Ev
-Ag
+FU
+FU
+FU
+Oo
 Ag
 Ag
 Ag
@@ -51926,15 +51926,15 @@ fF
 fF
 fF
 fF
-AX
-wQ
-wQ
 FR
 In
 Rj
 Rj
 Rj
 Th
+Ev
+Ev
+Ev
 Ev
 Oo
 Oo
@@ -52228,15 +52228,15 @@ pk
 AX
 pk
 AX
-AX
-FU
-FU
 FR
 FR
 Wp
 FR
 Wp
 FR
+Ev
+Ev
+Ev
 Ev
 Oo
 Oo
@@ -52530,9 +52530,6 @@ cp
 Bb
 cp
 Bb
-Bb
-SI
-SI
 Ev
 Ev
 QB
@@ -52540,6 +52537,9 @@ Ev
 QB
 Ev
 Ev
+oZ
+oZ
+oZ
 oZ
 oZ
 oZ

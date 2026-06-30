@@ -315,7 +315,7 @@
 /turf/simulated/wall/auto/reinforced/supernorn/colored/purple,
 /area/station/science/teleporter)
 "Hx" = (
-/obj/mapping_helper/wingrille_spawn/auto,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/unsimulated/floor/plating,
 /area/station/crewquarters/cryotron)
 "IW" = (
@@ -383,6 +383,10 @@
 	},
 /turf/simulated/floor,
 /area/space)
+"Sg" = (
+/obj/landmark/start/latejoin,
+/turf/unsimulated/floor,
+/area/station/crewquarters/cryotron)
 "SI" = (
 /turf/unsimulated/wall/auto/reinforced/supernorn/colored,
 /area/space)
@@ -422,7 +426,7 @@
 	},
 /area/space)
 "VZ" = (
-/obj/mapping_helper/wingrille_spawn/auto/crystal,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced/crystal,
 /turf/simulated/floor/plating,
 /area/space)
 "Xj" = (
@@ -45308,7 +45312,7 @@ zo
 yL
 yL
 SI
-Lp
+Sg
 Lp
 Lp
 Lp
