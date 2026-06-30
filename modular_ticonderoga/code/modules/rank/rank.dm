@@ -12,15 +12,6 @@ var/global/alist/un_ranks = list()
 
 	global.un_ranks = un_ranks_buffer
 
-/mob/living/carbon/human/proc/get_worn_rank()
-	. = null
-
-	var/obj/item/card/id/worn_id = src.get_id()
-	if (!istype(worn_id, /obj/item/card/id))
-		return
-
-	. = worn_id.rank
-
 /datum/mind/proc/assign_rank(datum/job/job)
 	var/rank_name = ""
 
@@ -44,6 +35,33 @@ var/global/alist/un_ranks = list()
 		rank_name = job.rank_type
 
 	src.assigned_rank = global.un_ranks[rank_name] || null
+
+/mob/living/carbon/human/proc/get_worn_rank()
+	. = null
+
+	var/obj/item/card/id/worn_id = src.get_id()
+	if (!istype(worn_id, /obj/item/card/id))
+		return
+
+	. = worn_id.rank
+
+/// Cargo cult the parent proc so we can add ranks to the name tag.
+/mob/living/carbon/human/update_name_tag(name = null)
+	if (isnull(src.name_tag))
+		return
+	if (isnull(name))
+		name = src.name
+	if (name == "Unknown")
+		name = ""
+	var/the_pos = findtext(name, " the")
+	if (the_pos)
+		name = copytext(name, 1, the_pos)
+	if (name)
+		var/datum/rank/owner_rank = src.get_worn_rank()
+		src.name_tag.set_info_tag("[owner_rank ? "[owner_rank.name] ([owner_rank.pay_grade])<br>" : ""][he_or_she(src)]")
+	else
+		src.name_tag.set_info_tag("")
+	src.name_tag.set_name(name, strip_parentheses=TRUE)
 
 ABSTRACT_TYPE(/datum/rank)
 /datum/rank
