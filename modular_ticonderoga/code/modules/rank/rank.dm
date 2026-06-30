@@ -21,15 +21,16 @@ var/global/alist/un_ranks = list()
 
 	. = worn_id.rank
 
-/mob/living/proc/assign_rank(datum/job/job)
+/datum/mind/proc/assign_rank(datum/job/job)
 	var/rank_name = ""
 
 	if (!length(job.rank_type))
+		src.assigned_rank = null
 		return
 
 	if (is_alist(job.rank_type))
 		var/alist/rank_list = job.rank_type
-		var/rounds_participated = src.client?.player?.get_rounds_participated() || 0
+		var/rounds_participated = src.current?.client?.player?.get_rounds_participated() || 0
 
 		for (var/rank_type in rank_list)
 			if (rank_list[rank_type] > rounds_participated)
@@ -42,7 +43,7 @@ var/global/alist/un_ranks = list()
 	else
 		rank_name = job.rank_type
 
-	. = global.un_ranks[rank_name] || null
+	src.assigned_rank = global.un_ranks[rank_name] || null
 
 ABSTRACT_TYPE(/datum/rank)
 /datum/rank
