@@ -25,6 +25,9 @@ FORBID_INCLUDE = [
 
     # Included by map.dm (which we have to whitelist)
     r'maps**/*.dm',
+# TICONDEROGA CHANGE
+	r'modular_ticonderoga/maps**/*.dm',
+# END TICONDEROGA CHANGE
 
     # OpenDream pragma lint file
     r'tools/ci/od_lints.dm'
