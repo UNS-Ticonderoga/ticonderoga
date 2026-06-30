@@ -1,7 +1,8 @@
 /**
  * @file
  * @copyright 2023
- * @author Garash (https://github.com/Garash2k)
+ * @author Original Garash (https://github.com/Garash2k)
+ * @author Changes DisturbHerb (https://github.com/DisturbHerb)
  * @license ISC
  */
 
@@ -105,6 +106,10 @@ interface IDComputerData {
   target_card_look: string;
   scan_name: string;
   pronouns: string;
+  // TICONDEROGA CHANGE
+  allow_rank: BooleanLike;
+  rank: string;
+  // TICONDEROGA CHANGE END
   custom_names: string[];
   target_accesses: number[];
   standard_jobs: StandardJob[];
@@ -145,6 +150,10 @@ export const IDComputer = () => {
     target_card_look,
     scan_name,
     pronouns,
+    // TICONDEROGA CHANGE
+    rank,
+    allow_rank,
+    // TICONDEROGA CHANGE END
     custom_names,
     target_accesses,
     standard_jobs,
@@ -252,6 +261,24 @@ export const IDComputer = () => {
                                 }
                               />
                             </LabeledList.Item>
+                            {/* TICONDEROGA CHANGE */}
+                            {!!allow_rank && (
+                              <LabeledList.Item label="Rank">
+                                <Button onClick={() => act('rank')}>
+                                  {rank || 'None'}
+                                </Button>
+                                {rank && (
+                                  <Button
+                                    onClick={() =>
+                                      act('rank', { rank: 'remove' })
+                                    }
+                                    icon="trash"
+                                    tooltip="Remove"
+                                  />
+                                )}
+                              </LabeledList.Item>
+                            )}
+                            {/* END TICONDEROGA CHANGE */}
                           </LabeledList>
                         </Stack.Item>
                         <Stack.Item>

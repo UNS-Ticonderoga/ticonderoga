@@ -270,6 +270,10 @@
 			.["custom_names"] = custom_names
 			.["target_card_look"] = src.modify.icon_state
 			.["target_accesses"] = src.modify.access
+// TICONDEROGA CHANGE
+			.["rank"] = src.modify.rank?.name
+			.["allow_rank"] = src.modify.allow_rank
+// TICONDEROGA CHANGE END
 			if(!isobserver(user))
 				user.unlock_medal("Identity Theft", 1)
 
@@ -381,6 +385,19 @@
 							src.modify.pronouns = get_singleton(/datum/pronouns/theyThem)
 					else if(params["pronouns"] == "remove")
 						src.modify.pronouns = null
+
+// TICONDEROGA CHANGE
+			if ("rank")
+				if (src.check_access(src.scan) && src.modify)
+					if (!src.modify.allow_rank)
+						return
+					if (params["rank"] == "remove")
+						src.modify.rank = null
+					else
+						var/alist/rank_cache = global.officer_ranks + global.enlisted_ranks
+						var/datum/rank/new_rank = rank_cache[tgui_input_list(usr, "Select a rank to assign.", "Assignment", rank_cache, src.modify.rank?.name)]
+						src.modify.rank = new_rank
+// TICONDEROGA CHANGE END
 
 			if ("assign")
 				if (src.check_access(src.scan) && src.modify)

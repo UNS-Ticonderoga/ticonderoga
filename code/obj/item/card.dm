@@ -118,8 +118,21 @@ TYPEINFO(/obj/item/card/emag)
 
 	get_desc()
 		. = ..()
+// TICONDEROGA CHANGE
+		var/list/output = list()
+		if (src.pronouns)
+			output += "Pronouns: [src.pronouns.name]"
+		if (src.rank)
+			output += " Rank: [src.rank.name] ([src.rank.pay_grade])"
+		if (!length(output))
+			return
+		. += output.Join(", ")
+// TICONDEROGA CHANGE ORIGINAL
+/*
 		if(src.pronouns)
 			. += " Pronouns: [src.pronouns.name]"
+*/
+// TICONDEROGA CHANGE END
 
 	registered_owner()
 		.= registered
