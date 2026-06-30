@@ -58,7 +58,7 @@ var/global/alist/un_ranks = list()
 		name = copytext(name, 1, the_pos)
 	if (name)
 		var/datum/rank/owner_rank = src.get_worn_rank()
-		src.name_tag.set_info_tag("[owner_rank ? "[owner_rank.name] ([owner_rank.pay_grade])<br>" : ""][he_or_she(src)]")
+		src.name_tag.set_info_tag("[owner_rank ? "[owner_rank.short_name] ([owner_rank.pay_grade])<br>" : ""][he_or_she(src)]")
 	else
 		src.name_tag.set_info_tag("")
 	src.name_tag.set_name(name, strip_parentheses=TRUE)
