@@ -23,6 +23,10 @@
 #include "macros\spawn.dm"			// SPAWN
 #include "plane.dm"					// debug icons
 #include "text.dm"					// text macros/helpers
+// TICONDEROGA CHANGE
+#include "_modular_ticonderoga\defines\rank.dm"
+#include "_modular_ticonderoga\macros\rank_ranges.dm"
+// END TICONDEROGA CHANGE
 #include "defines\abilities.dm"
 #include "defines\access.dm"
 #include "defines\actions.dm"
