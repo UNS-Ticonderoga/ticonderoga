@@ -298,6 +298,9 @@ else if (istype(JOB, /datum/job/security/security_officer))\
 	boutput(src, "<B>You are the [JOB.name].</B>")
 	src.job = JOB.name
 	src.mind.assigned_role = JOB.name
+// TICONDEROGA CHANGE
+	src.mind.assign_rank(JOB)
+// TICONDEROGA CHANGE END
 
 	if (!joined_late)
 		if (ticker?.mode && !istype(ticker.mode, /datum/game_mode/construction))
@@ -808,6 +811,9 @@ Equip items from body traits.
 		C.name = "[C.registered]’s ID Card ([C.assignment])"
 		C.access = JOB.access.Copy()
 		C.pronouns = src.get_pronouns()
+// TICONDEROGA CHANGE
+		C.rank = C.allow_rank ? src.mind?.assigned_rank : null
+// TICONDEROGA CHANGE END
 
 		if(!src.equip_if_possible(C, SLOT_WEAR_ID))
 			if(istype((src.wear_id), /obj/item/device/pda2))

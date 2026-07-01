@@ -73,6 +73,9 @@
 		player = mind.current
 
 		player.mind.assigned_role = job.name
+// TICONDEROGA CHANGE
+		player.mind.assign_rank(job)
+// TICONDEROGA CHANGE END
 		M.job = job.name
 		player.mind.transfer_to(M)
 		SPAWN(5 SECONDS)

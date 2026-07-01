@@ -3159,7 +3159,11 @@
 #include "code\z_dmm_suite\writer.dm"
 #include "interface\skin.dmf"
 #include "maps\config\map.dm"
+#include "modular_ticonderoga\code\modular.dm"
+#include "modular_ticonderoga\code\modules\rank\rank.dm"
+#include "modular_ticonderoga\code\modules\rank\ranks.dm"
 #include "modular_ticonderoga\code\obj\decal\wayfinding_line.dm"
+#include "modular_ticonderoga\code\obj\item\card-un.dm"
 #include "modular_ticonderoga\code\turf\nornwalls-unsimulated.dm"
 // END_INCLUDE
 

@@ -111,6 +111,9 @@
 			if (istext(src.thing_to_spawn)) //it's a job
 				var/datum/job/job = find_job_in_controller_by_string(src.thing_to_spawn)
 				new_mob.mind.assigned_role = src.thing_to_spawn
+// TICONDEROGA CHANGE
+				new_mob.mind.assign_rank(find_job_in_controller_by_string(src.thing_to_spawn))
+// TICONDEROGA CHANGE END
 				if (src.add_to_manifest)
 					var/obj/item/device/pda2/pda = locate() in new_mob
 					global.data_core.addManifest(new_mob, "", "", pda?.net_id, "")

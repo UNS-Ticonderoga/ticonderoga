@@ -118,8 +118,21 @@ TYPEINFO(/obj/item/card/emag)
 
 	get_desc()
 		. = ..()
+// TICONDEROGA CHANGE
+		var/list/output = list()
+		if (src.pronouns)
+			output += "Pronouns: [src.pronouns.name]"
+		if (src.rank)
+			output += "Rank: [src.rank.name] ([src.rank.get_pay_grade()])"
+		if (!length(output))
+			return
+		. += " [output.Join(", ")]"
+// TICONDEROGA CHANGE ORIGINAL
+/*
 		if(src.pronouns)
 			. += " Pronouns: [src.pronouns.name]"
+*/
+// TICONDEROGA CHANGE END
 
 	registered_owner()
 		.= registered
@@ -291,7 +304,12 @@ TYPEINFO(/obj/item/card/emag)
 /obj/item/card/id/attack_self(mob/user as mob)
 	if(ON_COOLDOWN(user, "showoff_item", SHOWOFF_COOLDOWN))
 		return
-	user.visible_message("[user] shows you: [bicon(src)] [src.name]: assignment: [src.assignment]", "You show off your card: [bicon(src)] [src.name]: assignment: [src.assignment]")
+// TICONDERGOA CHANGE
+	user.visible_message("[user] shows you: [bicon(src)] [src.name]: assignment: [src.assignment][(src.allow_rank && src.rank) ? ", rank: [src.rank.name] ([src.rank.get_pay_grade()])" : ""]",\
+		"You show off your card: [bicon(src)] [src.name]: assignment: [src.assignment][(src.allow_rank && src.rank) ? ", rank: [src.rank.name] ([src.rank.get_pay_grade()])" : ""]")
+// TICONDEROGA CHANGE ORIGINAL
+	// user.visible_message("[user] shows you: [bicon(src)] [src.name]: assignment: [src.assignment]", "You show off your card: [bicon(src)] [src.name]: assignment: [src.assignment]")
+// TICONDEROGA CHANGE END
 	src.add_fingerprint(user)
 	actions.start(new /datum/action/show_item(user, src, "id", 5, 3), user)
 

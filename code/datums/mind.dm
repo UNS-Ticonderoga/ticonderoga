@@ -61,6 +61,10 @@ datum/mind
 
 	var/show_respawn_prompts = TRUE
 
+// TICONDEROGA CHANGE
+	var/datum/rank/assigned_rank = null
+// END TICONDEROGA CHANGE
+
 	New(mob/M)
 		..()
 		if (M)

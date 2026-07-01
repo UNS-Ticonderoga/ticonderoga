@@ -3,12 +3,20 @@
 ABSTRACT_TYPE(/datum/job/engineering)
 /datum/job/engineering
 	ui_colour = TGUI_COLOUR_ORANGE
-	slot_card = /obj/item/card/id/engineering
+// TICONDEROGA CHANGE
+	rank_type = RANK_ENLISTED_JUNIOR
+	slot_card = /obj/item/card/id/un/engineering
+// TICONDEROGA CHANGE ORIGINAL
+	// slot_card = /obj/item/card/id/engineering
+// TICONDEROGA CHANGE END
 	job_category = JOB_ENGINEERING
 	email_group = MGD_ENGINEER
 
 /datum/job/engineering/engineer
 	name = "Engineer"
+// TICONDEROGA CHANGE
+	rank_type = RANK_ENLISTED_NCO
+// TICONDEROGA CHANGE END
 	limit = 8
 	wages = PAY::TRADESMAN
 	trait_list = list("training_engineer")
