@@ -2054,7 +2054,13 @@
 		src.item.pixel_y = src.pixel_y_offset
 		src.user.vis_contents += src.item
 
-		var/image/hand_overlay = src.item.SafeGetOverlayImage("showoff_hand_overlay", 'icons/effects/effects.dmi', hand_icon_state, MOB_LAYER + 0.11, src.pixel_x_hand_offset, src.pixel_y_hand_offset, color=user.get_fingertip_color())
+// TICONDEROGA CHANGE
+		var/image/hand_overlay = src.item.SafeGetOverlayImage("showoff_hand_overlay", src.item.modularized ? \
+			'modular_ticonderoga/icons/effects/effects.dmi' : 'icons/effects/effects.dmi', hand_icon_state, MOB_LAYER + 0.11, \
+			src.pixel_x_hand_offset, src.pixel_y_hand_offset, color=user.get_fingertip_color())
+// TICONDEROGA CHANGE ORIGINAL
+		// var/image/hand_overlay = src.item.SafeGetOverlayImage("showoff_hand_overlay", 'icons/effects/effects.dmi', hand_icon_state, MOB_LAYER + 0.11, src.pixel_x_hand_offset, src.pixel_y_hand_offset, color=user.get_fingertip_color())
+// TICONDEROGA CHANGE END
 		src.user.UpdateOverlays(hand_overlay, "showoff_hand_overlay")
 
 		src.user.set_dir(SOUTH)
