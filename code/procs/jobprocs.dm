@@ -797,7 +797,7 @@ Equip items from body traits.
 		C.access = JOB.access.Copy()
 		C.pronouns = src.get_pronouns()
 // TICONDEROGA CHANGE
-		C.rank = C.allow_rank ? src.mind.assigned_rank : null
+		C.rank = C.allow_rank ? src.mind?.assigned_rank : null
 // TICONDEROGA CHANGE END
 
 		if(!src.equip_if_possible(C, SLOT_WEAR_ID))
