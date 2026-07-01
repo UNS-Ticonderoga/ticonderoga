@@ -11,6 +11,9 @@ ABSTRACT_TYPE(/datum/job/civilian)
 // TICONDEROGA CHANGE END
 	job_category = JOB_CIVILIAN
 
+// TICONDEROGA CHANGE
+// TICONDEROGA CHANGE ORIGINAL
+/*
 /datum/job/civilian/chef
 	name = "Chef"
 	limit = 1
@@ -92,9 +95,6 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/chaplain
 	name = "Chaplain"
-// TICONDEROGA CHANGE
-	rank_type = RANK_OFFICER_O1
-// END TICONDEROGA CHANGE
 	limit = 1
 	wages = PAY::UNTRAINED
 	trait_list = list("training_chaplain")
@@ -148,9 +148,6 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/clown
 	name = "Clown"
-// TICONDEROGA CHANGE
-	rank_type = RANK_ENLISTED_E1 // The lowest of the low.
-// TICONDEROGA CHANGE END
 	limit = 1
 	wages = PAY::DUMBCLOWN
 	request_limit = 3 //this is definitely a bad idea
@@ -178,9 +175,6 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/AI
 	name = "AI"
-// TICONDEROGA CHANGE
-	rank_type = null
-// TICONDEROGA CHANGE END
 	ui_colour = TGUI_COLOUR_GREY
 	limit = 1
 	no_late_join = TRUE
@@ -206,9 +200,6 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/cyborg
 	name = "Cyborg"
-// TICONDEROGA CHANGE
-	rank_type = null
-// TICONDEROGA CHANGE END
 	ui_colour = TGUI_COLOUR_GREY
 	limit = 8
 	no_late_join = TRUE
@@ -231,3 +222,5 @@ ABSTRACT_TYPE(/datum/job/civilian)
 		APPLY_ATOM_PROPERTY(S, PROP_ATOM_ROUNDSTART_BORG, "borg")
 		S.traitHolder.removeTrait("cyber_incompatible")
 		return S
+*/
+// TICONDEROGA CHANGE END

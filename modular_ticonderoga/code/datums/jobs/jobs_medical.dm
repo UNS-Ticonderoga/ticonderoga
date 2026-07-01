@@ -1,18 +1,3 @@
-ABSTRACT_TYPE(/datum/job/medical)
-/datum/job/medical
-	ui_colour = TGUI_COLOUR_PINK
-// TICONDEROGA CHANGE
-	rank_type = RANK_OFFICER_O1
-	slot_card = /obj/item/card/id/un/medical
-// TICONDEROGA CHANGE ORIGINAL
-	// slot_card = /obj/item/card/id/medical
-// TICONDEROGA CHANGE END
-	job_category = JOB_MEDICAL
-	email_group = MGD_MEDICAL
-
-// TICONDEROGA CHANGE
-// TICONDEROGA CHANGE ORIGINAL
-/*
 /datum/job/medical/medical_doctor
 	name = "Medical Doctor"
 	limit = 5
@@ -22,34 +7,14 @@ ABSTRACT_TYPE(/datum/job/medical)
 	slot_back = list(/obj/item/storage/backpack/medic)
 	slot_glov = list(/obj/item/clothing/gloves/latex)
 	slot_belt = list(/obj/item/storage/belt/medical/prepared)
-	slot_jump = list(/obj/item/clothing/under/rank/medical)
+	slot_jump = list(/obj/item/clothing/under/scrub/blue)
 	slot_suit = list(/obj/item/clothing/suit/labcoat/medical)
-	slot_foot = list(/obj/item/clothing/shoes/red)
 	slot_ears = list(/obj/item/device/radio/headset/medical)
 	slot_eyes = list(/obj/item/clothing/glasses/healthgoggles/upgraded)
 	slot_poc1 = list(/obj/item/device/pda2/medical)
 	slot_poc2 = list(/obj/item/paper/book/from_file/pocketguide/medical)
-	items_in_backpack = list(/obj/item/crowbar/blue) // cogwerks: giving medics a guaranteed air tank, stealing it from roboticists (those fucks)
-	// 2018: guaranteed air tanks now spawn in boxes (depending on backpack type) to save room
+	items_in_backpack = list(/obj/item/crowbar/blue)
 	wiki_link = "https://wiki.ss13.co/Medical_Doctor"
-
-	derelict
-		//name = "Salvage Medic"
-		name = null
-		limit = 0
-		slot_suit = list(/obj/item/clothing/suit/armor/vest)
-		slot_head = list(/obj/item/clothing/head/helmet/swat)
-		slot_belt = list(/obj/item/tank/pocket/oxygen)
-		slot_mask = list(/obj/item/clothing/mask/breath)
-		slot_eyes = list(/obj/item/clothing/glasses/healthgoggles/upgraded)
-		slot_glov = list(/obj/item/clothing/gloves/latex)
-		items_in_backpack = list(/obj/item/crowbar,/obj/item/device/light/flashlight,/obj/item/storage/firstaid/regular,/obj/item/storage/firstaid/regular)
-		special_spawn_location = LANDMARK_HTR_TEAM
-
-		special_setup(var/mob/living/carbon/human/M)
-			..()
-			if (!M) return
-			M.show_text("<b>Something has gone terribly wrong here! Search for survivors and escape together.</b>", "blue")
 
 /datum/job/medical/geneticist
 	name = "Geneticist"
@@ -58,8 +23,7 @@ ABSTRACT_TYPE(/datum/job/medical)
 	access_string = "Geneticist"
 	slot_back = list(/obj/item/storage/backpack/genetics)
 	slot_belt = list(/obj/item/device/pda2/genetics)
-	slot_jump = list(/obj/item/clothing/under/rank/geneticist)
-	slot_foot = list(/obj/item/clothing/shoes/white)
+	slot_jump = list(/obj/item/clothing/under/scrub/teal)
 	slot_suit = list(/obj/item/clothing/suit/labcoat/genetics)
 	slot_ears = list(/obj/item/device/radio/headset/medical)
 	slot_poc1 = list(/obj/item/device/analyzer/genetic)
@@ -73,8 +37,7 @@ ABSTRACT_TYPE(/datum/job/medical)
 	access_string = "Roboticist"
 	slot_back = list(/obj/item/storage/backpack/robotics)
 	slot_belt = list(/obj/item/storage/belt/roboticist/prepared)
-	slot_jump = list(/obj/item/clothing/under/rank/roboticist)
-	slot_foot = list(/obj/item/clothing/shoes/black)
+	slot_jump = list(/obj/item/clothing/under/scrub/maroon)
 	slot_suit = list(/obj/item/clothing/suit/labcoat/robotics)
 	slot_glov = list(/obj/item/clothing/gloves/latex)
 	slot_eyes = list(/obj/item/clothing/glasses/healthgoggles/upgraded)
@@ -84,7 +47,9 @@ ABSTRACT_TYPE(/datum/job/medical)
 	wiki_link = "https://wiki.ss13.co/Roboticist"
 
 /datum/job/medical/medical_assistant
-	name = "Medical Trainee"
+	name = "Medical Assistant"
+	rank_type = RANK_ENLISTED_NCO
+	alias_names = list("Medical Trainee")
 	limit = 2
 	wages = PAY::UNTRAINED
 	trait_list = list("training_medical")
@@ -92,28 +57,29 @@ ABSTRACT_TYPE(/datum/job/medical)
 	rounds_allowed_to_play = ROUNDS_MAX_MEDASS
 	slot_back = list(/obj/item/storage/backpack/medic)
 	slot_belt = list(/obj/item/storage/belt/medical/prepared)
-	slot_foot = list(/obj/item/clothing/shoes/red)
 	slot_ears = list(/obj/item/device/radio/headset/medical)
 	slot_glov = list(/obj/item/clothing/gloves/latex)
 	slot_eyes = list(/obj/item/clothing/glasses/healthgoggles/upgraded)
 	slot_poc1 = list(/obj/item/device/pda2/medical)
 	slot_poc2 = list(/obj/item/paper/book/from_file/pocketguide/medical)
-	slot_jump = list(/obj/item/clothing/under/scrub = 30,/obj/item/clothing/under/scrub/teal = 14,/obj/item/clothing/under/scrub/blue = 14,/obj/item/clothing/under/scrub/purple = 14,/obj/item/clothing/under/scrub/orange = 14,/obj/item/clothing/under/scrub/pink = 14)
+	slot_jump = list(/obj/item/clothing/under/scrub)
 	wiki_link = "https://wiki.ss13.co/Medical_Assistant"
 
 /datum/job/medical/pharmacist
 	name = "Pharmacist"
+	alias_names = list("Scientist")
 	wages = PAY::DOCTORATE
-	limit = 1 // limited workspace
+	limit = 3
 	access_string = "Pharmacist"
 	slot_back = list(/obj/item/storage/backpack/pharmacist)
 	slot_belt = list(/obj/item/device/pda2/pharmacist)
-	slot_foot = list(/obj/item/clothing/shoes/white)
-	slot_jump = list(/obj/item/clothing/under/rank/pharmacist)
+	slot_jump = list(/obj/item/clothing/under/scrub/orange)
 	slot_suit = list(/obj/item/clothing/suit/labcoat/pharmacist)
 	slot_ears = list(/obj/item/device/radio/headset/pharmacist)
 	slot_eyes = list(/obj/item/clothing/glasses/spectro)
-	items_in_backpack = list(/obj/item/storage/box/beakerbox, /obj/item/beaker_lid, /obj/item/reagent_containers/injector_filler)
+	items_in_backpack = list(
+		/obj/item/storage/box/beakerbox,
+		/obj/item/beaker_lid,
+		/obj/item/reagent_containers/injector_filler,
+	)
 	wiki_link = "https://wiki.ss13.co/Pharmacist"
-*/
-// TICONDEROGA CHANGE END
