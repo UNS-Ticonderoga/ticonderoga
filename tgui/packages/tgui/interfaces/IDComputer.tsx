@@ -109,6 +109,7 @@ interface IDComputerData {
   // TICONDEROGA CHANGE
   allow_rank: BooleanLike;
   rank: string;
+  pay_grade: string;
   // TICONDEROGA CHANGE END
   custom_names: string[];
   target_accesses: number[];
@@ -153,6 +154,7 @@ export const IDComputer = () => {
     // TICONDEROGA CHANGE
     rank,
     allow_rank,
+    pay_grade,
     // TICONDEROGA CHANGE END
     custom_names,
     target_accesses,
@@ -265,7 +267,9 @@ export const IDComputer = () => {
                             {!!allow_rank && (
                               <LabeledList.Item label="Rank">
                                 <Button onClick={() => act('rank')}>
-                                  {rank || 'None'}
+                                  {rank
+                                    ? rank + ' (' + pay_grade + ')'
+                                    : 'None'}
                                 </Button>
                                 {rank && (
                                   <Button

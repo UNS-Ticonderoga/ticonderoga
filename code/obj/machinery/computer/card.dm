@@ -272,6 +272,7 @@
 			.["target_accesses"] = src.modify.access
 // TICONDEROGA CHANGE
 			.["rank"] = src.modify.rank?.name
+			.["pay_grade"] = src.modify.rank?.get_pay_grade()
 			.["allow_rank"] = src.modify.allow_rank
 // TICONDEROGA CHANGE END
 			if(!isobserver(user))
@@ -391,10 +392,24 @@
 				if (src.check_access(src.scan) && src.modify)
 					if (!src.modify.allow_rank)
 						return
+
 					if (params["rank"] == "remove")
 						src.modify.rank = null
+
 					else
-						var/datum/rank/new_rank = un_ranks[tgui_input_list(usr, "Select a rank to assign.", "Assignment", un_ranks, src.modify.rank?.name)]
+						var/list/input_list = list()
+
+						for (var/rank_name in global.un_ranks)
+							var/datum/rank/rank = global.un_ranks[rank_name]
+							input_list["[rank_name] ([rank.get_pay_grade()])"] = rank
+
+						if (!length(input_list))
+							return
+
+						input_list = sortList(input_list, /proc/cmp_un_ranks, TRUE)
+
+						var/current_rank = "[src.modify?.rank?.name] ([src.modify?.rank?.get_pay_grade()])" || null
+						var/datum/rank/new_rank = input_list[tgui_input_list(usr, "Select a rank to assign.", "Assignment", input_list, current_rank)]
 						src.modify.rank = new_rank
 // TICONDEROGA CHANGE END
 

@@ -1,7 +1,7 @@
-var/global/alist/un_ranks = list()
+var/global/list/un_ranks = list()
 
 /proc/build_rank_list()
-	var/alist/un_ranks_buffer = list()
+	var/list/un_ranks_buffer = list()
 
 	for (var/rank_type in concrete_typesof(/datum/rank))
 		var/datum/rank/rank = get_singleton(rank_type)
