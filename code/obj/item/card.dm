@@ -304,7 +304,12 @@ TYPEINFO(/obj/item/card/emag)
 /obj/item/card/id/attack_self(mob/user as mob)
 	if(ON_COOLDOWN(user, "showoff_item", SHOWOFF_COOLDOWN))
 		return
-	user.visible_message("[user] shows you: [bicon(src)] [src.name]: assignment: [src.assignment]", "You show off your card: [bicon(src)] [src.name]: assignment: [src.assignment]")
+// TICONDERGOA CHANGE
+	user.visible_message("[user] shows you: [bicon(src)] [src.name]: assignment: [src.assignment][(src.allow_rank && src.rank) ? ", rank: [src.rank.name] ([src.rank.get_pay_grade()])" : ""]",\
+		"You show off your card: [bicon(src)] [src.name]: assignment: [src.assignment][(src.allow_rank && src.rank) ? ", rank: [src.rank.name] ([src.rank.get_pay_grade()])" : ""]")
+// TICONDEROGA CHANGE ORIGINAL
+	// user.visible_message("[user] shows you: [bicon(src)] [src.name]: assignment: [src.assignment]", "You show off your card: [bicon(src)] [src.name]: assignment: [src.assignment]")
+// TICONDEROGA CHANGE END
 	src.add_fingerprint(user)
 	actions.start(new /datum/action/show_item(user, src, "id", 5, 3), user)
 
