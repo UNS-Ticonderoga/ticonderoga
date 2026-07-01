@@ -3,7 +3,12 @@
 ABSTRACT_TYPE(/datum/job/security)
 /datum/job/security
 	ui_colour = TGUI_COLOUR_RED
-	slot_card = /obj/item/card/id/security
+// TICONDEROGA CHANGE
+	rank_type = RANK_ENLISTED_NCO
+	slot_card = /obj/item/card/id/un/security
+// TICONDEROGA CHANGE ORIGINAL
+	// slot_card = /obj/item/card/id/security
+// TICONDEROGA CHANGE END
 	receives_miranda = TRUE
 	job_category = JOB_SECURITY
 	email_group = MGD_SECURITY

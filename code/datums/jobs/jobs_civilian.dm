@@ -3,7 +3,12 @@
 ABSTRACT_TYPE(/datum/job/civilian)
 /datum/job/civilian
 	ui_colour = TGUI_COLOUR_BLUE
-	slot_card = /obj/item/card/id/civilian
+// TICONDEROGA CHANGE
+	rank_type = RANK_ENLISTED_JUNIOR
+	slot_card = /obj/item/card/id/un/civilian
+// TICONDEROGA CHANGE ORIGINAL
+	// slot_card = /obj/item/card/id/civilian
+// TICONDEROGA CHANGE END
 	job_category = JOB_CIVILIAN
 
 /datum/job/civilian/chef
@@ -87,6 +92,9 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/chaplain
 	name = "Chaplain"
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O1
+// END TICONDEROGA CHANGE
 	limit = 1
 	wages = PAY::UNTRAINED
 	trait_list = list("training_chaplain")
@@ -140,6 +148,9 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/clown
 	name = "Clown"
+// TICONDEROGA CHANGE
+	rank_type = RANK_ENLISTED_E1 // The lowest of the low.
+// TICONDEROGA CHANGE END
 	limit = 1
 	wages = PAY::DUMBCLOWN
 	request_limit = 3 //this is definitely a bad idea
@@ -167,6 +178,9 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/AI
 	name = "AI"
+// TICONDEROGA CHANGE
+	rank_type = null
+// TICONDEROGA CHANGE END
 	ui_colour = TGUI_COLOUR_GREY
 	limit = 1
 	no_late_join = TRUE
@@ -192,6 +206,9 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 /datum/job/civilian/cyborg
 	name = "Cyborg"
+// TICONDEROGA CHANGE
+	rank_type = null
+// TICONDEROGA CHANGE END
 	ui_colour = TGUI_COLOUR_GREY
 	limit = 8
 	no_late_join = TRUE

@@ -121,6 +121,9 @@
 	build_supply_pack_cache()
 	build_syndi_buylist_cache()
 	build_clothingbooth_caches()
+// TICONDEROGA CHANGE
+	build_rank_list()
+// TICONDEROGA CHANGE END
 	initialize_biomes()
 
 	Z_LOG_DEBUG("World/Init", "Setting up airlock/APC wires...")

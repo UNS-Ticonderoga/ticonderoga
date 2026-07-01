@@ -3,7 +3,12 @@
 ABSTRACT_TYPE(/datum/job/command)
 /datum/job/command
 	ui_colour = TGUI_COLOUR_GREEN
-	slot_card = /obj/item/card/id/command
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O1
+	slot_card = /obj/item/card/id/un/command
+// TICONDEROGA CHANGE ORIGINAL
+	// slot_card = /obj/item/card/id/command
+// TICONDEROGA CHANGE END
 	map_can_autooverride = FALSE
 	invalid_antagonist_roles = list(ROLE_HEAD_REVOLUTIONARY, ROLE_GANG_MEMBER, ROLE_GANG_LEADER, ROLE_SPY_THIEF, ROLE_CONSPIRATOR)
 	job_category = JOB_COMMAND
@@ -29,7 +34,12 @@ ABSTRACT_TYPE(/datum/job/command)
 	receives_implants = list(/obj/item/implant/health/security/anti_mindhack/command)
 	wiki_link = "https://wiki.ss13.co/Captain"
 
-	slot_card = /obj/item/card/id/gold
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O4
+	slot_card = /obj/item/card/id/un/command
+// TICONDEROGA CHANGE ORIGINAL
+	// slot_card = /obj/item/card/id/gold
+// TICONDEROGA CHANGE END
 	slot_belt = list(/obj/item/device/pda2/captain)
 	slot_back = list(/obj/item/storage/backpack/captain)
 	slot_jump = list(/obj/item/clothing/under/rank/captain)
@@ -73,6 +83,9 @@ ABSTRACT_TYPE(/datum/job/command)
 
 /datum/job/command/head_of_personnel
 	name = "Head of Personnel"
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O3
+// TICONDEROGA CHANGE END
 	limit = 1
 	wages = PAY::IMPORTANT
 	access_string = "Head of Personnel"
@@ -93,6 +106,9 @@ ABSTRACT_TYPE(/datum/job/command)
 
 /datum/job/command/head_of_security
 	name = "Head of Security"
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O3
+// TICONDEROGA CHANGE END
 	limit = 1
 	wages = PAY::IMPORTANT
 	trait_list = list("training_drinker", "training_security")
@@ -142,6 +158,9 @@ ABSTRACT_TYPE(/datum/job/command)
 
 /datum/job/command/chief_engineer
 	name = "Chief Engineer"
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O2
+// TICONDEROGA CHANGE END
 	limit = 1
 	wages = PAY::IMPORTANT
 	trait_list = list("training_engineer")
@@ -205,6 +224,9 @@ ABSTRACT_TYPE(/datum/job/command)
 
 /datum/job/command/medical_director
 	name = "Medical Director"
+// TICONDEROGA CHANGE
+	rank_type = RANK_OFFICER_O3
+// TICONDEROGA CHANGE END
 	limit = 1
 	wages = PAY::IMPORTANT
 	trait_list = list("training_medical")

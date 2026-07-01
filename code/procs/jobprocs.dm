@@ -298,6 +298,9 @@ else if (istype(JOB, /datum/job/security/security_officer))\
 	boutput(src, "<B>You are the [JOB.name].</B>")
 	src.job = JOB.name
 	src.mind.assigned_role = JOB.name
+// TICONDEROGA CHANGE
+	src.mind.assign_rank(JOB)
+// TICONDEROGA CHANGE END
 
 	if (!joined_late)
 		if (ticker?.mode && !istype(ticker.mode, /datum/game_mode/construction))
@@ -680,8 +683,23 @@ Equip items from body traits.
 		carrier.trap_mob(pet, src)
 		trinket = carrier
 	else if (src.traitHolder && src.traitHolder.hasTrait("lunchbox"))
-		var/random_lunchbox_path = pick(childrentypesof(/obj/item/storage/lunchbox))
-		trinket = new random_lunchbox_path(src)
+		if (!src.traitHolder.hasTrait("picky_eater"))
+			var/random_lunchbox_path = pick(childrentypesof(/obj/item/storage/lunchbox))
+			trinket = new random_lunchbox_path(src)
+		else // Picky eater trait holders get a custom lunchbox with 3 of their favourite foods
+			var/lunchbox = new /obj/item/storage/lunchbox(src)
+			trinket = lunchbox
+			var/datum/trait/picky_eater/picky_trait = src.traitHolder.getTrait("picky_eater")
+			var/list/fav_foods = picky_trait.fav_foods
+			for (var/i in 1 to 3)
+				var/obj/item/food = fav_foods[i]
+				trinket.storage.add_contents(new food(src))
+			var/list/lunch_list = list(/obj/item/reagent_containers/food/drinks/water,\
+			/obj/item/kitchen/utensil/fork,\
+			/obj/item/kitchen/utensil/spoon,\
+			/obj/item/paper/lunchbox_note)
+			for (var/lunch_item_type in lunch_list)
+				trinket.storage.add_contents(new lunch_item_type(src))
 	else if (src.traitHolder && src.traitHolder.hasTrait("wheelchair"))
 		SPAWN(0) // Ensures wheelchair spawns with you even if you aren't latejoining at arrivals.
 			var/obj/stool/chair/comfy/wheelchair/the_chair = new /obj/stool/chair/comfy/wheelchair(get_turf(src))
@@ -793,6 +811,9 @@ Equip items from body traits.
 		C.name = "[C.registered]’s ID Card ([C.assignment])"
 		C.access = JOB.access.Copy()
 		C.pronouns = src.get_pronouns()
+// TICONDEROGA CHANGE
+		C.rank = C.allow_rank ? src.mind?.assigned_rank : null
+// TICONDEROGA CHANGE END
 
 		if(!src.equip_if_possible(C, SLOT_WEAR_ID))
 			if(istype((src.wear_id), /obj/item/device/pda2))

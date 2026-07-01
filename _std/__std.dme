@@ -23,6 +23,9 @@
 #include "macros\spawn.dm"			// SPAWN
 #include "plane.dm"					// debug icons
 #include "text.dm"					// text macros/helpers
+// TICONDEROGA CHANGE
+#include "_modular_ticonderoga\defines\rank.dm"
+// END TICONDEROGA CHANGE
 #include "defines\abilities.dm"
 #include "defines\access.dm"
 #include "defines\actions.dm"
@@ -201,6 +204,7 @@
 #include "namespaces\radio.dm"
 #include "namespaces\RCD.dm"
 #include "namespaces\soulguard.dm"
+#include "namespaces\manufacturer.dm"
 #include "color.dm"
 #include "compare.dm"
 #include "copy.dm"
