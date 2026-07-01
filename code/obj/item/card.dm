@@ -123,7 +123,7 @@ TYPEINFO(/obj/item/card/emag)
 		if (src.pronouns)
 			output += "Pronouns: [src.pronouns.name]"
 		if (src.rank)
-			output += "Rank: [src.rank.name] ([src.rank.pay_grade])"
+			output += "Rank: [src.rank.name] ([src.rank.get_pay_grade()])"
 		if (!length(output))
 			return
 		. += " [output.Join(", ")]"

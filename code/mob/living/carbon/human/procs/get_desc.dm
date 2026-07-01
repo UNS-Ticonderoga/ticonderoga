@@ -54,7 +54,7 @@
 	var/datum/rank/rank = src.get_worn_rank()
 	if (!show_vague && istype(rank, /datum/rank))
 		. +=  "<br>[SPAN_NOTICE("*---------*")]"
-		. +=  "<br>[SPAN_NOTICE("[Noun_s] rank is <B>[rank.name] ([rank.pay_grade])</B>.")]"
+		. +=  "<br>[SPAN_NOTICE("[Noun_s] rank is <B>[rank.name] ([rank.get_pay_grade()])</B>.")]"
 
 // END TICONDEROGA CHANGE
 	. +=  "<br>[SPAN_NOTICE("*---------*")]"

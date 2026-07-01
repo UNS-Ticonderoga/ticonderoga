@@ -1,49 +1,49 @@
 /datum/rank/officer/lcdr
-	name = "Lieutenant Commander"
+	name = RANK_OFFICER_O4
 	short_name = "LCDR"
-	pay_grade = "O4"
+	order = 4
 
 /datum/rank/officer/lt
-	name = "Lieutenant"
+	name = RANK_OFFICER_O3
 	short_name = "LT"
-	pay_grade = "O3"
+	order = 3
 
 /datum/rank/officer/slt
-	name = "Sublieutenant"
+	name = RANK_OFFICER_O2
 	short_name = "SLT"
-	pay_grade = "O2"
+	order = 2
 
 /datum/rank/officer/ens
-	name = "Ensign"
+	name = RANK_OFFICER_O1
 	short_name = "ENS"
-	pay_grade = "O1"
+	order = 1
 
 /datum/rank/enlisted/po1
-	name = "Petty Officer 1st Class"
+	name = RANK_ENLISTED_E6
 	short_name = "PO1"
-	pay_grade = "E6"
+	order = 6
 
 /datum/rank/enlisted/po2
-	name = "Petty Officer 2nd Class"
+	name = RANK_ENLISTED_E5
 	short_name = "PO2"
-	pay_grade = "E5"
+	order = 5
 
 /datum/rank/enlisted/po3
-	name = "Petty Officer 3rd Class"
+	name = RANK_ENLISTED_E4
 	short_name = "PO3"
-	pay_grade = "E4"
+	order = 4
 
 /datum/rank/enlisted/s1c
-	name = "Sailor 1st Class"
+	name = RANK_ENLISTED_E3
 	short_name = "S1C"
-	pay_grade = "E3"
+	order = 3
 
 /datum/rank/enlisted/s2c
-	name = "Sailor 2nd Class"
+	name = RANK_ENLISTED_E2
 	short_name = "S2C"
-	pay_grade = "E2"
+	order = 2
 
 /datum/rank/enlisted/s3c
-	name = "Sailor 3rd Class"
+	name = RANK_ENLISTED_E1
 	short_name = "S3C"
-	pay_grade = "E1"
+	order = 1
